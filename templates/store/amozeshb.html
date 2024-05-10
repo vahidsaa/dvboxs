@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+ آموزش انداره گیری محصول 
+ {% endblock %}
+{% block description %}
+<meta name="description" content="آموزش انداره گیری محصول در ویباکس"/>
+{% endblock %}
+
+
+{% block content %}
+
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+
+						<h1>آموزش اندازه زدن محصول</h1>
+						<p>ویباکس</p>
+						<div class="hero-btn">
+							<a href="{% url 'amozesha' %}" class="bordered-btn">نحوه سفارش و پرداخت</a>
+						  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+	
+	<!-- single article section -->
+	<div class="mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="single-article-section">
+						<div class="single-article-text">
+							<div class="text-center"> <img src="../../static/assets/amozesh/meter.jpg" alt="اموزش متر زدن"> </div>
+							<br>
+							<h2>( ارتفاع * عرض * طول  ) </h2>
+							<p class="text-primary"> بین طول و عرض عدد بزرگتر طول میباشد , ارتفاع هم در اخر نوشته میشود مثال &larr; (30 * 25 * 45) &larr; 45 طول 25 عرض و 30 ارتفاع میباشد .   </p>
+							<h4>برای اندازه گیری محصول خود ابتدا طول ,  عرض و ارتفاع محصول را اندازه گرفته سپس با توجه به نوع کارتن بین 3لایه و 5لایه 0.5 سانتی متر تا 1 سانتی متر به هر طرف ابعاد اضافه کرده تا اندازه جعبه مخصوص محصول خود را بدست اورید.</h4>
+
+							<h5 class="text-danger">&#9733;گاهی اوقات با عوض کردن جای ارتفاع با عرض یا طول میتوانید قیمت محصول را کاهش دهید&#9733;</h5>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+    {% endblock %}

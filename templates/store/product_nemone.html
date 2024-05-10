@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+نمونه قالب آماده دایکات | ویباکس 
+ {% endblock %}
+{% block description %}
+<meta name="description" content="نمونه قالب های اماده دایکات موجود در ویباکس."/>
+{% endblock %}
+
+
+{% block content %}
+	
+
+
+
+
+
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+
+                    <h1>جعبه دایکاتی</h1>
+                    <p>نمونه قالب های دایکاتی</p>
+                    <p>09365423870 / 09199638223 / 09196228188</p>
+                    <div class="hero-btn">
+                        <a href="{% url 'amozesha' %}" class="bordered-btn">نحوه سفارش و پرداخت</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb section -->
+
+<!-- products -->
+<div class="product-section mt-150 mb-150">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-filters">
+                    <ul>
+                        <li class="active" data-filter="*">همه</li>
+                        <li data-filter=".daroyi">دارویی</li>
+                        <li data-filter=".mamoli">معمولی</li>
+                        <li data-filter=".pitzayi">پیتزایی</li>
+                        <li data-filter=".sini">سینی</li>
+                        <li data-filter=".snack">اسنک</li>
+                        <li data-filter=".tah-ghofli">ته قفلی</li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row product-lists">
+
+        {% for product in products %}
+        {% if product.daroyi %}
+            <div class="col-lg-4 col-md-6 text-center daroyi">
+                <div class="single-product-item">
+                    <div class="product-image">
+                        <a href="#"><img src="{{ product.image.url }}" alt="دارویی"></a>
+                    </div>
+                    <h3>{{ product.name }}</h3>
+                    <a href="{% url 'home' %}" class="cart-btn"><i class="ri-customer-service-2-line"></i> سفارش</a>
+                </div>
+            </div>
+            {% elif product.mamoli %}
+            <div class="col-lg-4 col-md-6 text-center mamoli">
+                <div class="single-product-item">
+                    <div class="product-image">
+                        <a href="#"><img src="{{ product.image.url }}" alt="دارویی"></a>
+                    </div>
+                    <h3>{{ product.name }}</h3>
+                    <a href="{% url 'home' %}" class="cart-btn"><i class="ri-customer-service-2-line"></i> سفارش</a>
+                </div>
+            </div>
+            {% elif product.pitzayi %}
+            <div class="col-lg-4 col-md-6 text-center pitzayi">
+                <div class="single-product-item">
+                    <div class="product-image">
+                        <a href="#"><img src="{{ product.image.url }}" alt="دارویی"></a>
+                    </div>
+                    <h3>{{ product.name }}</h3>
+                    <a href="{% url 'home' %}" class="cart-btn"><i class="ri-customer-service-2-line"></i> سفارش</a>
+                </div>
+            </div>
+            {% elif product.sini %}
+            <div class="col-lg-4 col-md-6 text-center sini">
+                <div class="single-product-item">
+                    <div class="product-image">
+                        <a href="#"><img src="{{ product.image.url }}" alt="دارویی"></a>
+                    </div>
+                    <h3>{{ product.name }}</h3>
+                    <a href="{% url 'home' %}" class="cart-btn"><i class="ri-customer-service-2-line"></i> سفارش</a>
+                </div>
+            </div>
+            {% elif product.snack %}
+            <div class="col-lg-4 col-md-6 text-center snack">
+                <div class="single-product-item">
+                    <div class="product-image">
+                        <a href="#"><img src="{{ product.image.url }}" alt="دارویی"></a>
+                    </div>
+                    <h3>{{ product.name }}</h3>
+                    <a href="{% url 'home' %}" class="cart-btn"><i class="ri-customer-service-2-line"></i> سفارش</a>
+                </div>
+            </div>
+            {% elif product.tahghofli %}
+            <div class="col-lg-4 col-md-6 text-center tah-ghofli">
+                <div class="single-product-item">
+                    <div class="product-image">
+                        <a href="#"><img src="{{ product.image.url }}" alt="دارویی"></a>
+                    </div>
+                    <h3>{{ product.name }}</h3>
+                    <a href="{% url 'home' %}" class="cart-btn"> سفارش <i class="ri-customer-service-2-line"></i></a>
+                </div>
+            </div>
+
+
+            {% endif %}
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+ثبت محصول | ویباکس
+ {% endblock %}
+{% block description %}
+<meta name="description" content="ثبت محصول در ویباکس"/>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>مرحله تایید آدرس و شماره تلفن </p>
+                        <!-- <a href="{% url 'update_info' %}" class="bordered-btn">بروزرسانی اطلاعات</a> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+	
+	<!-- single article section -->
+
+
+ 
+    <div class="mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="single-article-section">
+						<div class="single-article-text">
+							<div class="card">
+                                <div class="card-header text-center">
+                                    سفارشات
+                                </div>
+                                <div class="card-body text-center">
+                                    {% for product in cart_products %}
+
+                                        {{ product.name }} 
+                                        {% if product.sale_price != 0 %} <br>
+                                        قیمت : 
+                                        {{ product.sale_price }} تومان
+                                        {% else %}
+                                        قیمت :
+                                        {{ product.price }} تومان
+                                        {% endif %}
+                                        <br>
+                                        تعداد : 
+                                        {% for key, value in quantities.items %}
+                                        {% if key == product.id|slugify %}
+                                       {{ value }}
+                                        {% endif %}
+                                    {% endfor %}
+                                    
+                                    <br>
+                                    <hr>
+                                    <br>
+                                    {% endfor %}
+                                    قیمت نهایی : 
+                                    {{ totals }} تومان
+                                        <br><br>
+
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="card">
+                                <div class="card-header text-center">
+                                    اطلاعات ارسال
+                                </div>
+                                <div class="card-body text-center">
+                                    <form method="POST" action="{% url 'checkout' %}">
+                                        {% csrf_token %}
+                                    {{ user_form.as_p}}
+
+
+                                    <button type="submit" class="cart-btn siginupbtn text-center" > تایید خرید</button>
+                                </form>
+                                </div>
+                            </div>
+
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    {% endblock %}

@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block title %}
+  سفارش کارتن | سفارش جعبه دایکاتی | سفارش جعبه لمینتی |طراحی لوگو و چاپ  
+ {% endblock %}
+{% block description %}
+<meta name="description" content="برای سفارش کارتن و یا جعبه بصورت ساده , دایکاتی و یا لمینتی با ما همراه باشید .طراحی لوگو , چاپ با شابلون ."/>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+
+                    <h1>سفارش جعبه و طراحی</h1>
+                    <p>درب معمولی | دایکاتی | لمینتی</p>
+                    <p>09365423870 / 09199638223 / 09196228188</p>
+                    <div class="hero-btn">
+                        <a href="{% url 'amozesha' %}" class="bordered-btn">نحوه سفارش و پرداخت</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb section -->
+
+<!-- single product -->
+<div class="single-product mt-150 mb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="single-product-img">
+                    <img src="{{ product_show.image.url }}" alt="{{product_show.name}}">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="single-product-content">
+                    <h3 class="text-center">{{ product_show.name }}</h3>
+                    <p class="single-product-pricing text-center"><span></span> {{ product_show.description_up }} </p>
+                    <p >{{ product_show.description }}</p>
+                {% if product_show.description_sub %}
+                    <p class="sub-p text-center">{{ product_show.description_sub }}.</p>
+                    {% else %}
+                    {% endif %}
+                    <div class="single-product-form text-center ">
+                        <!-- <form action="index_2.html">
+                            <input type="number" placeholder="1">
+                        </form> -->
+                        <p><strong>  مشاوره و سفارش :  </strong>09356202245 / 09199638223 / 09196228188</p>
+                            <p>یا از طریق پیام رسان</p>
+                        <ul class="product-share text-center">
+                            <li><a href=""><i class="ri-whatsapp-line"></i></a></li>
+                            <li><a href=""><i class="ri-telegram-line"></i></a></li>
+                            <li><a href=""><i class="ri-instagram-line"></i></a></li>
+                            <li><a href=""><i class="ri-chat-check-line"></i></a></li>
+                        </ul><br>
+                        <a href="{% url 'home' %}" class="cart-btn">صفحه اصلی</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end single product -->
+
+<!-- more products -->
+
+
+
+
+{% endblock %}

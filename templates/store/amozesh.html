@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block title %}
+آموزش های قبل سفارش| ویباکس
+ {% endblock %}
+{% block description %}
+<meta name="description" content="نکات قبل از خرید در سایت ویباکس"/>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+
+
+
+	<!-- end search arewa -->
+	
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<h1>آموزش های قبل سفارش</h1>
+						<br>
+						<div class="hero-btn">
+							<a href="{% url 'amozesha' %}" class="bordered-btn">نحوه سفارش و پرداخت</a>
+						  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- latest news -->
+	<div class="latest-news mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="single-latest-news">
+						<a href="{% url 'amozesha' %}"><div class="latest-news-bg news-bg-1"></div></a>
+						<div class="news-text-box">
+							<h3><a href="{% url 'amozesha' %}">نکات مهم قبل از سفارش</a></h3>
+							<p class="blog-meta">
+								<span class="author"><i class="ri-map-pin-user-line"></i> صالحی</span>
+								<span class="date"><i class="ri-calendar-event-fill"></i> 5 بهمن 1402</span>
+							</p>
+							<p class="excerpt">توضیحاتی در مورد نحوه سفارش و راه های پرداخت و همچنین زمان تحویل .</p>
+							<a href="{% url 'amozesha' %}" class="read-more-btn">مطالعه <i class="ri-arrow-right-s-line"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-latest-news">
+						<a href="{% url 'amozeshb' %}"><div class="latest-news-bg news-bg-2"></div></a>
+						<div class="news-text-box">
+							<h3><a href="{% url 'amozeshb' %}">آموزش اندازه گرفتن محصول</a></h3>
+							<p class="blog-meta">
+								<span class="author"><i class="ri-map-pin-user-line"></i> صالحی</span>
+								<span class="date"><i class="ri-calendar-event-fill"></i> 5 بهمن 1402</span>
+							</p>
+							<p class="excerpt">اندازه گیری (ارتفاع , عرض , طول) و نکاتی که باید هنگام اندازه گیری کردن دانست .</p>
+							<a href="{% url 'amozeshb' %}" class="read-more-btn">مطالعه <i class="ri-arrow-right-s-line"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+					<div class="single-latest-news">
+						<a href="{% url 'amozeshc' %}"><div class="latest-news-bg news-bg-3"></div></a>
+						<div class="news-text-box">
+							<h3><a href="{% url 'amozeshc' %}">اطلاعاتی مفید درباره کارتن.</a></h3>
+							<p class="blog-meta">
+								<span class="author"><i class="ri-map-pin-user-line"></i> صالحی</span>
+								<span class="date"><i class="ri-calendar-event-fill"></i> 5 بهمن 1402</span>
+							</p>
+							<p class="excerpt">  انواع بسته بندی جعبه کارتن و چاپ شابلون یا افست  برای درب معمولی و لمینتی. </p>
+							<a href="{% url 'amozeshc' %}" class="read-more-btn">مطالعه <i class="ri-arrow-right-s-line"></i></a>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+	</div>
+	<!-- end latest news -->
+
+
+
+
+
+    {% endblock %}

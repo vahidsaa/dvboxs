@@ -1,0 +1,119 @@
+{% load static %}	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="{% url 'home' %}">
+								<img src="{% static 'assets/11111.png' %}" alt="ویباکس">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li ><a href="{% url 'home' %}">صفحه اصلی</a></li>
+
+								<li><a href="#">خدمات</a>
+									<ul class="sub-menu">
+										<li><a href="{% url 'shop' %}"> جعبه پستی و آماده</a></li>
+										<li><a href="{% url 'shop' %}">انواع چسب کارتن</a></li>
+										<li><a href="{% url 'product_show' 1 %}">جعبه معمولی</a></li>
+										<li><a href="{% url 'product_show' 2 %}">جعبه دایکاتی</a></li>
+										<li><a href="{% url 'product_show' 3 %}"> جعبه لمینتی</a></li>
+										<li><a href="{% url 'product_show' 4 %}">طراحی لوگو</a></li>
+										<li><a href="{% url 'product_amade' %}">قالب های آماده دایکاتی</a></li>
+										<li><a href="{% url 'product_nemone' %}"> نمونه قالب دایکاتی</a></li>
+										<li><a href="{% url 'today_list' %}"> لیست تحویل امروز</a></li>
+
+
+									</ul>
+								</li>
+
+								<li><a href="{% url 'bime' %}"> خدمات تخفیفی</a>
+									<ul class="sub-menu">
+										<li><a href="{% url 'bime' %}">بیمه سامان</a></li>
+										<!-- <li><a href="#">خرید انواع لاپ و ریسه</a></li> -->
+									</ul>
+								</li>
+
+										{% if user.is_authenticated %}
+										<li><a href="{% url 'update_info' %}"> پروفایل</a>
+											<ul class="sub-menu">
+										<li><a href="{% url 'update_info' %}">بروزرسانی اطلاعات</a></li>
+										<li><a href="{% url 'logout' %}">خروج</a></li>
+									</ul>
+										{% else %}
+										<li><a href="{% url 'register' %}"> پروفایل</a>
+											<ul class="sub-menu">
+										<li><a href="{% url 'register' %}">ثبت نام</a></li>
+										<li><a href="{% url 'login' %}">ورود</a></li>
+											</ul>
+										{% endif %}
+									
+								</li>
+								<li><a href="{% url 'amozesh' %}">آموزش ها</a>
+								</li>
+								<li><a href="{% url 'aboutus' %}">درباره ما</a>
+								</li>
+								<!-- <li><a href="#">تماس با ما</a></li> -->
+
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart" href="{% url 'cart_summary' %}"><i class="ri-shopping-cart-line"  ></i><span class='badge badge-warning' id='cart_quantity' style="position: absolute;"> {{ cart|length }} </span></a>
+										<a class="mobile-hide search-bar-icon" href="#"><i class="ri-search-2-line"></i></a>
+										{% if request.user.is_authenticated %}
+										<a class="" href="{% url 'update_info' %}"><i class="ri-user-3-line" aria-hidden="true"></i></a>
+										{% else %}
+										<a class="" href="{% url 'login' %}"><i class="ri-user-3-line" aria-hidden="true"></i></a>
+										{% endif %}
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<!-- <a class="mobile-show search-bar-icon" href="#"><i class="ri-search-2-line"></i></a> -->
+						<a class="mobile-show search-bar-icon" href="#"><i class="ri-search-2-line"></i></a>
+						<div class="mobile-menu "></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+	
+	<!-- search area -->
+	<div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="ri-close-line"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+
+
+							<form method="post" action="{% url 'search' %}">
+								{% csrf_token %}
+								<input type="text" placeholder="؟" name="searched">
+								<button type="submit"> جستوجو <i class="ri-search-2-line"></i></button>
+							</form>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

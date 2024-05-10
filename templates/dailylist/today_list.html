@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+ لیست سفارشات امروز - ویباکس 
+ {% endblock %}
+{% block description %}
+<meta name="description" content="لیست تحویل سفارشات امروز سایت ویباکس."/>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <h1>لیست تحویل امروز</h1>
+                    <p>{{ today.date }} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-150 mb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="single-article-section">
+
+                    <div class="single-article-text">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col"></th>
+                                <th scope="col">نام</th>
+                                <th scope="col">وضعیت ساخت</th>
+                                <th scope="col">وضعیت تحویل</th>
+                              </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                              <tr>
+                              {% for list in today_list %}
+                                <th scope="row"></th>
+                                <td>{{list.name}}</td>
+                                <td>{{list.status}}</td>
+                                <td>{{list.send}}</td>
+                              </tr>
+                              {% endfor %}
+                              <tr>
+                                <th scope="row"></th>
+                                <td>ساسانی</td>
+                                <td>تمام شده</td>
+                                <td>ارسال شده</td>
+                              </tr>
+                              <tr>
+                                <th scope="row"></th>
+                                <td>جعفری</td>
+                                <td>در حال ساخت</td>
+                                <td>--</td>
+                              </tr>
+                              <tr>
+                                <th scope="row"></th>
+                                <td>حسن زاده</td>
+                                <td>--</td>
+                                <td>--</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  {% endblock %}

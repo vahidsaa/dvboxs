@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+ سفارش و پرداخت | ویباکس 
+ {% endblock %}
+{% block description %}
+<meta name="description" content="آموزش نحوه سفارش و پرداخت"/>
+{% endblock %}
+
+
+{% block content %}
+
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<h1>نحوه سفارش و پرداخت در ویباکس</h1>
+						<p>حضوری | پیام رسان | تلفنی</p>
+						<p>کارت خوان | کارت به کارت | کریپتو</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- single article section -->
+	<div class="mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="single-article-section">
+						<div class="text-center">  
+							<h4 class="text-danger">&#9733;لطفا قبل از هرگونه پرداخت با مشاورین تماس بگیرید!&#9733;</h4></div>
+							<hr>
+							<h5 class="text-warning text-center"> &#9733; پرداخت سفارشات بصورت نقدی میباشد و ثبت سفارش شما پس از پرداخت بیانه (1/3 مبلغ کل) انجام میشود , سفارشات بین 1 تا 5 روز کاری آماده و پس از تسویه کامل سفارش ارسال میگردد !! &#9733; </h5>
+							
+							<hr>
+							<br>
+						<div class="single-article-text">
+
+							<h2> سفارش بصورت حضوری (پیشنهادی):</h2>
+							<h5>با حضور در آدرس زیر متوانید جنس و نوع بسته بندی محصول خود را راحت تر انتخاب کنید و پرداخت را بصورت حضوری انجام دهید . </h5>
+							<p> آدرس : تهران , خیابان رجایی , سه راه ابریشم , خیابان همدانی , خیابان نهر فیروز آبادی , روبری  پارک بهاران</p>
+
+							<a href="https://maps.app.goo.gl/DU8kWdZz8mCZbuLA6" target="_blank" class="boxed-btn text-center">آدرس در گوگل</a>
+
+							<a href="https://nshn.ir/54_bQmHOQxiA-j" target="_blank" class="boxed-btn text-center">آدرس در نشان</a>
+
+							<a href="https://balad.ir/p/PPnOTymhKWRBqC" target="_blank" class="boxed-btn text-center">آدرس در بلد</a>
+
+							<hr>
+							<h2>از طریق سایت (محدودیت سفارش!) :</h2>
+							<h5> پس از اضافه کردن محصول در سبد خود میتوانید آن را ثبت کرده و مشاورین در اولین فرصت با شما ارتباط برقرار میکنند .(لطفا در وارد کردن اطلاعات دقت کنید)</h5>
+							<br>
+							<h5 class="text-danger">فقط مخصوص سفارش جعبه پستی , جعبه های آماده و چسب کارتن میباشد .</h5>
+
+						{% if request.user.is_authenticated %}
+							<a href="{% url 'update_info' %}" target="_blank" class="boxed-btn text-center">بروز رسانی اطلاعات</a>
+							<a href="{% url 'cart_summary' %}" target="_blank" class="boxed-btn">سبد خرید</a>
+							{% else %}
+							<a href="{% url 'login' %}" target="_blank" class="boxed-btn text-center">ورود</a>
+							{% endif %}
+
+
+
+
+
+							<hr>
+							<h2>از طریق پیام رسان :</h2>
+							<h5>شما میتوانید از طریق پیام رسان ها سفارش خود را ثبت کنید و مشاورین ما در اولین فرصت با شما تماس میگیرند .</h5>
+							<div class="social-icons text-center">
+								<ul>
+									<li><a href="#" target="_blank"><i class="ri-whatsapp-line"></i></a></li>
+									<li><a href="#" target="_blank"><i class="ri-telegram-line"></i></a></li>
+									<li><a href="#" target="_blank"><i class="ri-instagram-line"></i></a></li>
+									<li><a href="#" target="_blank"><i class="ri-chat-check-line"></i></a></li>
+								</ul>
+							</div>
+							<!-- <h5>برای پرداخت هم میتوانید بصورت حضوری و یا با استفاده از شماره های زیر اقدام کنید.</h5>
+							<p class="text-danger">حتما قبل از پرداخت با مشاورین تماس بگیرید .</p>
+							<h3 class="text-center">شماره کارت ( وحید صالحی)</h3>
+							<h4 class="text-center p-3 mb-2 bg-primary text-white"><a href="#footer-box" class="read-more-btn"> تماس بگیرید</a></h4>
+
+							<h3 class="text-center">USDT - Trc20(tron)</h3>
+							<h4 class="text-center p-3 mb-2 bg-secondary text-white"> vcdabniovpfsjkionviop danlknmpao</h4>
+
+							<h3 class="text-center">USDT - Bep20(bainance)</h3>
+							<h4 class="text-center p-3 mb-2 bg-secondary text-white">vcdabniovpfsjkionviop danlknmpao</h4>
+							<h3 class="text-center">DAI - Bep20</h3>
+							<h4 class="text-center p-3 mb-2 bg-secondary text-white">vcdabniovpfsjkionviop danlknmpao</h4>
+
+							<h3 class="text-center">Dooge </h3>
+							<h4 class="text-center p-3 mb-2 bg-secondary text-white">vcdabniovpfsjkionviop danlknmpao</h4>
+							<hr> -->
+							<hr>
+							<h2>بصورت تلفنی :</h2>
+							<h4> 02155060288</h4>
+							<h4>
+								09196228188 
+								/ 09199638223
+								/ 09365423870
+							</h4>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+    {% endblock %}
+

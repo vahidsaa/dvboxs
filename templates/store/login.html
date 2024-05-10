@@ -1,0 +1,135 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+	<!-- title -->
+	<title> صفحه ورود به حساب | ویباکس </title>
+    <meta name="description" content="ورود به حساب کاربری , ویباکس"/>
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="/static/assets/1111.png">
+
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="{% static 'css/all-main.css' %}">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+	<!-- animate css -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="{% static 'css/meanmenu.min.css' %}">
+	<!-- main style -->
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<!-- responsive -->
+	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+</head>
+<body>
+
+
+
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+        <strong>{{ message }}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    
+    {% endfor %}
+    {% endif %}
+
+    <div data-bs-spy="scroll" data-bs-target="#gotop">
+
+
+		<div id="gotop">
+			<a href="{% url 'home' %}" id="gotopbtn"><i class="ri-home-heart-line"></i></a>
+		</div>
+	
+
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+    <div class="login_wrapper">
+        <div class="login_box">
+            <a href="{% url 'register' %}" class="neon-button loginsignup">ثبت نام</a>
+            <div class="login_header">
+                <span>خوش آمدید</span>
+            </div>
+
+            <div class="input_box">
+                <input type="text"  id="user-login" name="username" class="input-field" required>
+                <label for="user" class="label">نام کاربری </label>
+                <i class="ri-user-line icon-login"></i>
+                <span class="form-text text-muted"><small>لطفا به کوچک و بزرگ بودن حروف دقت کنید.</small></span>
+            </div>
+            <div class="input_box">
+                <input type="password" id="pass-login" name="password" class="input-field" required>
+                <label for="pass" class="label">رمز عبور </label>
+                <i class="ri-git-repository-private-line icon-login"></i>
+            </div>
+            <div class="remember-forget">
+                <!-- <div class="remember-me">
+                <input type="checkbox" id="remember">
+                <label for="remember">مرا بخاطر بسپار</label>
+                </div> -->
+                <!-- <div class="forget">
+                    <a href="#">بازگردانی رمز</a>
+                </div> -->
+            </div>
+            <div class="input_box">
+                <input type="submit" class="input-submit" value="ورود">
+            </div>
+            <!-- <div class="register">
+                <span>همین الان اکانت بساز !  <a href="{% url 'register' %}"> ثبت نام </a></span>
+            </div> -->
+        </div>
+    </div>
+    </form>
+    
+    
+    
+
+
+
+
+
+
+
+
+    <script src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script> -->
+	<!-- bootstrap -->
+	<!-- <script src="{% static 'bootstrap.main.js' %}"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<!-- count down -->
+	<script src="{% static 'js/jquery.countdown.js' %}"></script>
+	<!-- isotope -->
+	<script src="{% static 'js/jquery.isotope-3.0.6.min.js' %}"></script>
+	<!-- waypoints -->
+	<script src="{% static 'js/waypoints.js' %}"></script>
+	<!-- owl carousel -->
+	<script src="{% static 'js/owl_carousel.min.js' %}"></script>
+	<!-- magnific popup -->
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+	<!-- mean menu -->
+	<script src="{% static 'js/jquery.meanmenu.min.js' %}"></script>
+	<!-- sticker js -->
+	<script src="{% static 'js/sticker.js' %}"></script>
+	<!-- main js -->
+	<script src="{% static 'js/main.js' %}"></script>
+	
+
+
+</body>
+</html>

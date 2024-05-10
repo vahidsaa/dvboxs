@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+ انواع بسته بندی کارتن | ویباکس 
+ {% endblock %}
+{% block description %}
+<meta name="description" content="انواع بسته بندی کارتن ."/>
+{% endblock %}
+
+
+{% block content %}
+
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+
+						<h1> انواع بسته بندی کارتن | ویباکس 
+						</h1>
+						<p>درب معمولی - دایکاتی - لمینتی </p>
+						<div class="hero-btn">
+							<a href="{% url 'amozesha' %}" class="boxed-btn"> سفارش و نحوه پرداخت </a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+	
+	<!-- single article section -->
+	<div class="mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="single-article-section">
+						
+						<div class="single-article-text">
+							
+
+							<h2>درب معمولی </h2>
+							<p>در این نوع بسته بندی ورق کارتن با اسفاده از دستگاه چاک و برش طبق ابعاد مورد نظر شما ساخته میشود ,  میتوانید بین 3لایه و 5لایه بودن آن طبق وزن محصولتان و یا رنگ سفید یا قهوه ای کارتن تصمیم بگیرید.  </p>
+							<p>معمولا برای چاپ روی جعبه درب معمولی از شابلون استفاده میشود و چاپ ان بصورت تک رنگ میباشد .</p>
+							<p>این نوع بسته بندی قیمت مناسب تری نسبت به دایکاتی و لمینتی دارد و حتی با انتخاب نوع جنس کارتن میتوانید قیمت آن را کاهش دهید . </p>
+							<hr>
+							<h2>کارتن دایکاتی</h2>
+							<p>اگر محصولات شما به بسته بندی شیک و زیبا تری نیاز دارد بهتر است از این نوع بسته بندی استفاده کنید , برای ساخت این نوع جعبه ابتدا باید قالب مخصوص خود را طبق ابعاد محصولتان سفارش دهید که طبق هر ابعاد و نوع قالب قیمت متفاوتی دارد .</p>
+							<h4>انواع قالب :</h4>
+							<li>
+								<ul><a href="{% url 'product_amade' %}"target="_blank">درب دارویی</a></ul>
+								<ul><a href="{% url 'product_amade' %}"target="_blank">معمولی</a></ul>
+								<ul><a href="{% url 'product_amade' %}"target="_blank">پیتزایی</a></ul>
+								<ul> <a href="{% url 'product_amade' %}"target="_blank">کیبوردی</a> </ul>
+								<ul><a href="{% url 'product_amade' %}"target="_blank">سینی</a> </ul>
+								<ul><a href="{% url 'product_amade' %}"target="_blank">ته قفلی</a></ul>
+							</li>
+							<p>برای اینکه هزینه های شما عزیزان کمتر شود ما تعدادی  <a href="{% url 'product_amade' %}" target="_blank">قالب آماده </a>در انبار موجود داریم , شما میتوانید با انتخاب نزدیکترین ابعاد به ابعاد خود هزینه های خود را کاهش دهید .</p>
+							<hr>
+							<h2>جعبه لمینتی</h2>
+							<p>در این نوع بسته بندی باید ورق مقوایی تهیه کرده و با استفاده از چاپ افست طرح و لوگوی خود را روی آن چاپ کنید سپس ورق چاپ شده را روی ورق (کارتن) سینگل با استفاده از دستگاه لمینت چسباند .</p>
+						<p>سینگل : از چسباندن یک لایه مسطح ورق به یک لایه موج دار ساخته میشود .</p>
+						<p>میتوانید برای شکیل تر شدن بسته بندی از قالب دایکات برای آن استفاده کنید یا اگر هزینه مهم هست بصورت درب معمولی سفارش ساخت دهید .</p>
+					</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+    {% endblock %}

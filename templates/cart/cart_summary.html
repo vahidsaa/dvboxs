@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+سبد خرید | ویباکس 
+ {% endblock %}
+{% block description %}
+<meta name="description" content="سبد خرید در سایت ویباکس"/>
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+
+
+
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+
+                    <h1>سفارشات فعلاً بصورت حضوری , پیام رسان ها و یا تلفنی میباشد</h1>
+                    <div class="hero-btns ">
+                        <a href="{% url 'shop' %}" class="boxed-btn">ادامه خرید</a>
+                        <a href="{% url 'amozesha' %}" class="bordered-btn">نحوه سفارش و پرداخت</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb section -->
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+	<h4>{{ message }}</h4>
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+{% endfor %}
+{% endif %}
+<!-- cart -->
+<div class="cart-section mt-150 mb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="cart-table-wrap">
+                    
+
+                {% if cart_products %}
+                    <table class="cart-table">
+                        <thead class="cart-table-head">
+                            <tr class="table-head-row">
+                                <th class="product-remove"></th>
+                                <th class="product-image">محصول</th>
+                                <th class="product-name">نام محصول</th>
+                                <th class="product-price">قیمت تکی</th>
+                                <th class="product-quantity">تعداد</th>
+                                <!-- <th class="product-price2">  قیمت تعداد</th> -->
+                                <!-- <th class="product-update">بروزرسانی</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for product in cart_products %}
+                            <tr class="table-body-row">
+                                <td class="product-remove"><button type="button" data-index="{{ product.id }}" class="cart-btn delete-product" > <i class="ri-delete-bin-fill"></i> </button></td>
+                                <td class="product-image"><img src="{{ product.image.url}}" alt=""></td>
+                                <td class="product-name">{{product.name}}</td>
+                                <td class="product-price">{{product.sale_price}}</td>
+                                <td class="product-quantity">              
+
+                                    
+                                        {% for key, value in quantities.items %}
+                                            {% if key == product.id|slugify %}
+                                           {{ value }}
+                                            {% endif %}
+                                        {% endfor %}
+
+                                 
+                                <!-- <td class="product-price2">{{totals}} (تومان) </td> -->
+                                <!-- <td class="product-update"><button type="button" data-index="{{ product.id }}" class="cart-btn update-cart"><i class="ri-loop-left-line"></i></button> </td> -->
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="total-section">
+                    <table class="total-table">
+                        <thead class="total-table-head">
+                            <tr class="table-total-row">
+                                <th></th>
+                                <th>قیمت نهایی</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="total-data">
+                                <td>مجموع اجناس: </td>
+                                <td>{{totals}} </td>
+                            </tr>
+                            <tr class="total-data">
+                                <td>هرینه ارسال: </td>
+                                <td>پس کرایه</td>
+                            </tr>
+                            <tr class="total-data">
+                                <td>جمع کل: </td>
+                                <td>{{totals}} (تومان)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="cart-buttons">
+
+                        <a href="{% url 'order' %}" class="boxed-btn black">ثبت کردن</a>
+                    </div>
+                </div>
+
+
+                <div class="coupon-section">
+                    <h3>بن تخفیف داری ؟</h3>
+                    <div class="coupon-form-wrap">
+                        <form action="#">
+                            <p><input type="text" placeholder="کد را وارد کنید"></p>
+                            <p><input type="submit" value="اعمال کد"></p>
+                        </form>
+                    </div>
+                    {% else %}
+                    <h5 class="text-center"> محصولی برای خرید ثبت نکردید . </h5>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+    $(document).on('click', '.delete-product', function(e){
+        e.preventDefault();
+        // var productid = $(this).data('index');
+        $.ajax({
+        type: 'POST',
+        url: "{% url 'cart_delete' %}",
+        data: {
+            product_id: $(this).data('index'),
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            action: 'post'
+        },
+    
+        success: function(json){
+                
+            location.reload();
+        },
+    
+        error: function(xhr, errmsg, err){
+    
+        }
+
+
+        });
+    
+    
+    })
+    
+    
+    
+    </script>
+
+
+{% endblock %}
