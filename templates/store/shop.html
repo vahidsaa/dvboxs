@@ -51,12 +51,16 @@
                 </div>
             </div>
 
+		</div>
+	</div>
+	<div class="product-section mt-150 mb-150">
+		<div class="container">
 
 			<div class="row product-lists">
 
-				{% for product in amade %}
+				{% for product in posti %}
 				{% if product.status %}
-				<div class="col-lg-4 col-md-6 text-center amade">
+				<div class="col-lg-4 col-md-6 text-center posti">
 					<div class="single-product-item">
 						<div class="product-image">
 						{% if product.price == 0 %}
@@ -75,7 +79,7 @@
 					</div>
 				</div>
 				{% else %}
-				<div class="col-lg-4 col-md-6 text-center amade">
+				<div class="col-lg-4 col-md-6 text-center posti">
 					<div class="single-product-item">
 						<div class="product-image">
 							<a href="{% url 'product_shop' product.id %}" class="disabled"><img src="{{ product.image.url }}" alt="{{ product.alt }}"></a>
@@ -88,9 +92,10 @@
 				</div>
 				{% endif %}
 				{% endfor %}
-				{% for product in tape %}
+				<hr>
+				{% for product in amade %}
 				{% if product.status %}
-				<div class="col-lg-4 col-md-6 text-center tape">
+				<div class="col-lg-4 col-md-6 text-center amade">
 					<div class="single-product-item">
 						<div class="product-image">
 							{% if product.price == 0 %}
@@ -109,7 +114,7 @@
 					</div>
 				</div>
 				{% else %}
-				<div class="col-lg-4 col-md-6 text-center tape">
+				<div class="col-lg-4 col-md-6 text-center amade">
 					<div class="single-product-item">
 						<div class="product-image">
 							<a href="{% url 'product_shop' product.id %}" class="disabled"><img src="{{ product.image.url }}" alt="{{ product.alt }}"></a>
@@ -123,9 +128,10 @@
 				</div>
 				{% endif %}
 				{% endfor %}
-				{% for product in posti %}
+				<hr>
+				{% for product in tape %}
 				{% if product.status %}
-				<div class="col-lg-4 col-md-6 text-center posti">
+				<div class="col-lg-4 col-md-6 text-center tape">
 					<div class="single-product-item">
 						<div class="product-image">
 							{% if product.price == 0 %}
@@ -145,7 +151,7 @@
 				</div>
 
 				{% else%}
-				<div class="col-lg-4 col-md-6 text-center posti">
+				<div class="col-lg-4 col-md-6 text-center tape">
 					<div class="single-product-item">
 						<div class="product-image">
 							<a href="{% url 'product_shop' product.id %}" class="disabled"><div class="badge bg-danger text-white position-absolute"> تمام شد </div><img src="{{ product.image.url }}" alt="{{ product.alt }} "></a>
@@ -169,8 +175,6 @@
 			</div>
 		</div>
 	</div>
-
-
 
 
 {% endblock %}
