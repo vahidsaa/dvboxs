@@ -1416,7 +1416,7 @@ html, body {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 29px;
+  font-size: 35px;
 
 }
 .hero-text p.subtitle-small {
@@ -2241,7 +2241,7 @@ input[type="number"] {
   margin-bottom: 15px;
 }
 .single-product-form p, strong{
-  font-size: 25px;
+  font-size: 14.5px;
 }
 
 .single-product-content h4 {
