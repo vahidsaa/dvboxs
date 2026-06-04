@@ -261,7 +261,3 @@ git add requirements.txt README.md
 git commit -m "Add requirements.txt and comprehensive README for deployment on Iran server"
 git push origin main
 ```
-
-خروجی دستور `git push` را بفرستید تا ببینیم موفق بوده یا نه.
-
-**بعد از آن، کارهای گوگل (Search Console) تمام شده و پروژه روی گیت‌هاب به‌روزرسانی شده است.**
