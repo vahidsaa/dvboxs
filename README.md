@@ -1,7 +1,3 @@
-عالی. `requirements.txt` آماده است. اما برای سروری که اینترنت ندارد، باید **نحوه نصب دستی** را در `README.md` توضیح دهیم.
-
-## ✅ مرحله دوم: ساخت `README.md` کامل
-
 دستور زیر را بزنید تا فایل ایجاد شود:
 
 ```bash
@@ -25,7 +21,7 @@ cat > /home/dvboxs/README.md << 'EOF'
 
 ### مرحله 1: اتصال به سرور
 ```bash
-ssh root@87.248.145.148 -p 9011
+ssh root@server -p port
 ```
 
 ### مرحله 2: به‌روزرسانی سیستم و نصب پیش‌نیازها
@@ -265,7 +261,3 @@ git add requirements.txt README.md
 git commit -m "Add requirements.txt and comprehensive README for deployment on Iran server"
 git push origin main
 ```
-
-خروجی دستور `git push` را بفرستید تا ببینیم موفق بوده یا نه.
-
-**بعد از آن، کارهای گوگل (Search Console) تمام شده و پروژه روی گیت‌هاب به‌روزرسانی شده است.**
