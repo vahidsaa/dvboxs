@@ -3,23 +3,24 @@
 {% load static %}
 
 {% block title %}
-خرید کارتن آنلاین | کارتن‌ سازی صالحی 
+فروشگاه آنلاین خرید کارتن بسته بندی | کارتن سازی صالحی | ویباکس 
  {% endblock %}
 {% block description %}
-<meta name="description" content="خرید انواع کارتن پستی، کارتن اسباب کشی و کارتن سفارشی با بهترین قیمت. کارتن‌ سازی صالحی با سابقه از سال ۱۳۷۰، ارسال به سراسر ایران.">
+<meta name="description" content="خرید کارتن با قیمت مناسب از تولید کننده | خرید کارتن اسباب کشی | کارتن آماده | کارتن پستی , کارتن سازی صالحی.">
 <meta rel="canonical" href="https://vboxs.ir/">
-<meta property="og:locale" content="fa_IR">
+<meta property="og:locale" content="fa_IR"> 
 <meta property="og:type" content="website">
 <meta property="og:title" content="فروشگاه آنلاین خرید کارتن بصورت آماده یا سفارشی [قیمت عمده] | ویباکس">
 <meta property="og:description" content="خرید کارتن با قیمت مناسب از تولید کننده | خرید کارتن اسباب کشی |خرید کارتن آماده | خرید کارتن پستی , کارتن سازی صالحی">
-<meta property="og:url" content="https://vboxs.ir/">
+<meta property="og:url" content="https://vboxs.ir/"> 
 <meta property="og:site_name" content="ویباکس">
-<meta property="og:updated_time" content="2026-06-04T12:00:00+03:30">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:updated_time" content="2024-06-21T15:29:27+03:30">
+<meta name="twitter:card" content="summary_large_image"> 
 <meta name="twitter:title" content="فروشگاه آنلاین خرید کارتن بصورت آماده یا سفارشی [قیمت عمده] | ویباکس">
 <meta name="twitter:description" content="خرید کارتن با قیمت مناسب از تولید کننده | خرید کارتن اسباب کشی | کارتن آماده | کارتن پستی , کارتن سازی صالحی">
-<meta name="twitter:label1" content="انواع کارتن">
+<meta  name="twitter:label1" content="انواع کارتن">
 <meta name="twitter:data1" content="60">
+
 
 {% endblock %}
 
@@ -146,7 +147,7 @@
 						<div class="content">
 							<h2><strong>سفارش کارتن</strong></h2>
 
-							<p> بهترین انتخاب برای بسته‌ بندی محصول شما <strong> سفارش کارتن </strong> در ابعاد دلخواه است , </p> <p><strong>سفارش کارتن</strong> کارتن با هر تعداد که نیاز دارید در ویباکس امکان‌پذیر است </p>
+							<p> بهنرین انتخاب برای بسته بندی محصول شما <strong> سفارش کارتن </strong> در ابعاد دلخواه شماست , </p> <p><strong>سفارش کارتن</strong> با هر تعدادی که شما نیاز دارید در ویباکس </p>
 
 						</div>
 					</div>
@@ -155,7 +156,7 @@
 					<div class="list-box d-flex justify-content-start align-items-center">
 						<div class="content">
 							<h2><strong>قیمت کارتن</strong></h2>
-							 <p>قیمت <strong>خرید کارتن</strong>به عواملی مثل , ابعاد کارتن (طول - عرض - ارتفاع ) , تعداد لایه کارتن (5 لایه و یا سه لایه ) , جنس مقوای استفاده شده در کارتن , ساده و یا چاپ دار بودن آن بستگی دارد . </p>
+							 <p>قیمت <strong>خرید کارتن</strong> به عواملی مثل , ابعاد کارتن (طول - عرض - ارتفاع ) , تعداد لایه کارتن (5 لایه و یا سه لایه ) , جنس مقوای استفاده شده در کارتن , ساده و یا چاپ دار بودن آن بستگی دارد . </p>
 
 						</div>
 					</div>
@@ -173,21 +174,7 @@
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-title" id="section-title">	
 						<h3> دسته بندی<span class="orange-text"> محصولات </span></h3>
-
 						<p>قبل از سفارش لطفا به <a href="{% url 'amozesha' %}">نکات قبل خرید</a> توجه فرمایید .</p>
-
-
-
-
-                    <!-- دکمه جدید تخفیف بیمه سامان -->
-                    <div class="mt-3">
-                        <a href="{% url 'bime' %}" class="boxed-btn" style="background-color: #28a745; border-color: #28a745;">
-                            🎁 5% تخفیف ویژه با بیمه سامان
-                        </a>
-                    </div>
-
-
-
 					</div>
 				</div>
 			</div>
@@ -274,34 +261,7 @@
 
                     <!-- <div class="text">جنس : تست , فلوت , ایرانی :3لایه <br>  سایز ورق :200*90</div> -->
                     <!--Countdown Timer-->
-                    <div class="time-counter">
-    <div class="time-countdown clearfix" data-countdown="2026/06/31">
-        <div class="counter-column">
-            <div class="inner">
-                <span class="count">29</span>
-                <span class="title">روز</span>
-            </div>
-        </div>
-        <div class="counter-column">
-            <div class="inner">
-                <span class="count">12</span>
-                <span class="title">ساعت</span>
-            </div>
-        </div>
-        <div class="counter-column">
-            <div class="inner">
-                <span class="count">05</span>
-                <span class="title">دقیقه</span>
-            </div>
-        </div>
-        <div class="counter-column">
-            <div class="inner">
-                <span class="count">45</span>
-                <span class="title">ثانیه</span>
-            </div>
-        </div>
-    </div>
-</div>
+                    <div class="time-counter"><div class="time-countdown clearfix" data-countdown="2024/4/02"><div class="counter-column"><div class="inner"><span class="count">00</span>Days</div></div> <div class="counter-column"><div class="inner"><span class="count">00</span>Hours</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Mins</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Secs</div></div></div></div>
 			<!-- <a href="#" class="cart-btn mt-3"><i class="fas fa-shopping-cart"></i> اطلاعات بیشتر </a> <br> -->
                 </div>
             </div>
@@ -354,7 +314,7 @@
 						<h2>جعبه سازی <span class="orange-text">صالحی</span></h2>
 						<p class="but-sub">جعبه سازی صالحی از ابتدای سال 1370 شروع به تولید انواع جعبه کارتنی  برای شما عزیزان کرده است , هدف ما از راه اندازی این وب سایت حذف واسطه ها میباشد و ما تمام تلاش خود را برای جلب رضایت و راحتی شما انجام میدهیم.</p>
 						<p class="but-sub">ما آماده ارائه انواع ورق با فلوت های B , C , E   </p>
-						<p class="but-sub">-  سینگل، سه لایه و پنج لایه، چاپ تک رنگ  </p>
+						<p class="but-sub">- سينگل , سه لایه و پنج لایه , چاپ تک رنگ  </p>
 						<p class="but-sub">- انواع جعبه لمینتی  </p>
 						<p class="but-sub">- انواع جعبه دایکاتی  </p>
 						<p class="but-sub"> - طراحی لوگو برای چاپ یک رنگ (شابلون) , کارت ویزیت , وب سایت  </p>
@@ -386,7 +346,7 @@
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-title">	
 						<h3><span class="orange-text">نکات</span> و آموزش </h3>
-						<p>با مطالعه این نکات، فرآیند سفارش‌ برای شما آسان‌تر می‌شود. </p>
+						<p>توضیحاتی که اگه بدونی سفارش دادن برات خیلی راحت تر میشه </p>
 					</div>
 				</div>
 			</div>

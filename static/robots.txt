@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Sitemap: https://vboxs.ir/static/sitemap.xml
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /cart/
+Disallow: /order/

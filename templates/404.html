@@ -2,42 +2,68 @@
 
 {% load static %}
 
+{% block title %}
+صفحه مورد نظر یافت نشد | خطای ۴۰۴ | کارتن‌سازی صالحی
+{% endblock %}
+
+{% block description %}
+<meta name="description" content="صفحه مورد نظر شما در سایت کارتن‌سازی صالحی یافت نشد. لطفاً به صفحه اصلی بازگردید یا از طریق شماره‌های تماس با ما در ارتباط باشید.">
+{% endblock %}
+
 {% block content %}
 
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <h1>خطای ۴۰۴</h1>
+                    <p>صفحه مورد نظر یافت نشد</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- error section -->
+<div class="full-height-section error-section">
+    <div class="full-height-tablecell">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 text-center">
+                    <div class="error-text">
+                        <i class="ri-emotion-sad-line" style="font-size: 80px; color: #ff6b00;"></i>
+                        <h1>متأسفیم، صفحه مورد نظر پیدا نشد</h1>
+                        <p>شاید آدرس صفحه را اشتباه وارد کرده‌اید یا صفحه حذف شده باشد.</p>
+                        
+                        <!-- دکمه بازگشت به خانه -->
+                        <a href="{% url 'home' %}" class="boxed-btn mt-3">بازگشت به صفحه اصلی</a>
+                        
+                        <hr class="mt-5 mb-3">
 
-		<!-- breadcrumb-section -->
-		<div class="breadcrumb-section breadcrumb-bg">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 offset-lg-2 text-center">
-						<div class="breadcrumb-text">
-							<p>مشاوره و سفارش </p>
-							<h1>09196228188 <br> 09199638223 <br> 09365423870</h1>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end breadcrumb section -->
-		<!-- error section -->
-		<div class="full-height-section error-section">
-			<div class="full-height-tablecell">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-8 offset-lg-2 text-center">
-							<div class="error-text">
-								<i class="ri-emotion-sad-line"></i>
-								<h1>متاسفیم , صفحه مورد نظر پیدا نشد</h1>
-								<p>The page you requested for is not found.</p>
-								<a href="{% url 'home' %}" class="boxed-btn">صفحه اصلی</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                        <!-- پیشنهاد جستجو -->
+                        <p class="text-muted">یا می‌توانید از طریق جستجو پیدا کنید:</p>
+                        <div class="search-bar-form" style="max-width: 400px; margin: 0 auto;">
+                            <form method="post" action="{% url 'search' %}">
+                                {% csrf_token %}
+                                <div class="input-group">
+                                    <input type="text" name="searched" class="form-control" placeholder="جستجو در سایت..." style="text-align: right;">
+                                    <button type="submit" class="btn btn-warning">جستجو</button>
+                                </div>
+                            </form>
+                        </div>
 
+                        <hr class="mt-5 mb-3">
 
+                        <!-- راه‌های تماس (کمک به کاربر) -->
+                        <p class="text-muted">اگر نیاز به کمک دارید، با ما تماس بگیرید:</p>
+                        <h5>📞 ۰۲۱-۵۵۰۶۰۲۸۸</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

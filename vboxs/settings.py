@@ -24,10 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-j1nq!di$2&yi94-pve6g%3tc60dvr)3bzoh37kysfd(iiuvbl$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
-
+ALLOWED_HOSTS = ['87.248.145.148', 'vboxs.ir','www.vboxs.ir',  'localhost']
 
 # Application definition
 
@@ -87,18 +86,26 @@ WSGI_APPLICATION = 'vboxs.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dvboxs',
-        'USER': 'vahid',
-        'PASSWORD': 'vahid123456',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'dvboxs',
+#        'USER': 'vahid',
+#        'PASSWORD': 'vahid123456',
+#        'HOST': 'localhost',
+#        'PORT': '',
+#        'CONN_MAX_AGE': 0,
+#        'OPTIONS': {
+#            'connect_timeout': 3,
+#        },
+#    }
+#}
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -141,3 +148,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATIC_ROOT = '/home/dvboxs/staticfiles'
+
+

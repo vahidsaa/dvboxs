@@ -4,12 +4,11 @@
 
 
 {% block title %}
-  سفارش کارتن | سفارش جعبه دایکاتی | سفارش جعبه لمینتی |طراحی لوگو و چاپ  
+{{ product_show.name }} | ساخت سفارشی جعبه | کارتن‌ سازی صالحی
  {% endblock %}
 {% block description %}
-<meta name="description" content="برای سفارش کارتن و یا جعبه بصورت ساده , دایکاتی و یا لمینتی با ما همراه باشید .طراحی لوگو , چاپ با شابلون ."/>
+<meta name="description" content="{{ product_show.name }} | {{ product_show.description|truncatewords:20 }} | قیمت مناسب | کارتن‌ سازی صالحی">
 {% endblock %}
-
 
 
 {% block content %}
@@ -21,11 +20,14 @@
             <div class="col-lg-8 offset-lg-2 text-center">
                 <div class="breadcrumb-text">
 
-                    <h1>سفارش جعبه و طراحی</h1>
-                    <p>درب معمولی | دایکاتی | لمینتی</p>
+                    <h1>{{ product_show.name }} </h1>
+
+
+                    <p> مشاوره رايگان ☇</p>
 
                     <div class="hero-btn">
-                        <a href="{% url 'amozesha' %}" class="bordered-btn">نحوه سفارش و پرداخت</a>
+                       <!-- <a href="{% url 'amozesha' %}" class="bordered-btn">نحوه سفارش و پرداخت</a>-->
+				<br>
 						            <a href="#footer-box" class="bordered-btn">تماس با ما</a>
 
                     </div>

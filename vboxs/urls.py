@@ -4,15 +4,17 @@ from django.urls import path, include
 from . import settings
 from django.conf.urls.static import static
 from django.views.generic.base import RedirectView
+from store.views import search
+
 
 urlpatterns = [
-    path('admin/login/', RedirectView.as_view(url='/')),
+   # path('admin/login/', RedirectView.as_view(url='/')),
     path('admin/', admin.site.urls),
     path('', include('store.urls')),
     path('cart/', include('cart.urls')),
     path('daily/', include('dailylist.urls')),
     path('order/', include('order.urls')),
-
+    path('search/', search, name='search'),
 
 
 

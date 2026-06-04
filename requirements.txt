@@ -1,0 +1,10 @@
+asgiref @ file:///home/env/django_packages/asgiref-3.11.1-py3-none-any.whl#sha256=e8667a091e69529631969fd45dc268fa79b99c92c5fcdda727757e52146ec133
+Django @ file:///home/env/django_packages/django-5.2.14-py3-none-any.whl#sha256=6f712143bd3064310d1f50fac859c3e9a274bdcfc9595339853be7779297fc76
+django-phonenumber-field==8.4.0
+phonenumbers==9.0.31
+pillow @ file:///home/env/django_packages/pillow-12.2.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl#sha256=b86024e52a1b269467a802258c25521e6d742349d760728092e1bc2d135b4d76
+psycopg2-binary @ file:///home/env/django_packages/psycopg2_binary-2.9.12-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl#sha256=9fe06d93e72f1c048e731a2e3e7854a5bfaa58fc736068df90b352cefe66f03f
+setuptools @ file:///home/env/django_packages/setuptools-82.0.1-py3-none-any.whl#sha256=a59e362652f08dcd477c78bb6e7bd9d80a7995bc73ce773050228a348ce2e5bb
+sqlparse @ file:///home/env/django_packages/sqlparse-0.5.5-py3-none-any.whl#sha256=12a08b3bf3eec877c519589833aed092e2444e68240a3577e8e26148acc7b1ba
+tzdata @ file:///home/env/django_packages/tzdata-2026.2-py2.py3-none-any.whl#sha256=bbe9af844f658da81a5f95019480da3a89415801f6cc966806612cc7169bffe7
+uWSGI==2.0.31

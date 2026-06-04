@@ -177,17 +177,27 @@ def update_info(request):
         return redirect('home')
 
 
+#def search(request):
+#    if request.method == "POST":
+#        searched = request.POST['searched']
+#        vector = SearchVector('name', 'discrption', 'alt')
+#        query = SearchQuery(searched)
+#        searched = Product.objects.annotate(rank=SearchRank(vector, query)).filter(rank__gte=0.0001).order_by('-rank')
+        # searched = Product.objects.filter(Q(name__icontains=searched) | Q(discrption__icontains=searched))
+#        return render(request, 'store/search.html', {'searched':searched})
+#    else:
+#        return render(request, 'store/search.html', {})
 def search(request):
     if request.method == "POST":
         searched = request.POST['searched']
-        vector = SearchVector('name', 'discrption', 'alt')
-        query = SearchQuery(searched)
-        searched = Product.objects.annotate(rank=SearchRank(vector, query)).filter(rank__gte=0.0001).order_by('-rank')
-        # searched = Product.objects.filter(Q(name__icontains=searched) | Q(discrption__icontains=searched))
-        return render(request, 'store/search.html', {'searched':searched})
+        searched = Product.objects.filter(
+            Q(name__icontains=searched) | 
+            Q(discrption__icontains=searched) | 
+            Q(alt__icontains=searched)
+        )
+        return render(request, 'store/search.html', {'searched': searched})
     else:
         return render(request, 'store/search.html', {})
-
 
 
 def aboutus(request):

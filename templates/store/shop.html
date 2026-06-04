@@ -6,7 +6,7 @@
  خرید کارتن پستی , کارتن اسباب کشی - ویباکس 
  {% endblock %}
 {% block description %}
-<meta name="description" content="خرید کارتن پستی و کارتن اسباب کشی در ابعاد مختلف  , کارتن سازی صالحی.">
+<meta name="description" content="خرید کارتن پستی، کارتن اسباب‌کشی و کارتن آماده با بهترین قیمت. کارتن‌ سازی صالحی با سابقه از سال ۱۳۷۰، ارسال به سراسر تهران و ایران.">
 <meta rel="canonical" href="https://vboxs.ir/">
 <meta property="og:locale" content="fa_IR"> 
 <meta property="og:type" content="website">
@@ -14,7 +14,7 @@
 <meta property="og:description" content="خرید کارتن پستی و کارتن اسباب کشی در ابعاد مختلف  , کارتن سازی صالحی">
 <meta property="og:url" content="https://vboxs.ir/"> 
 <meta property="og:site_name" content="ویباکس">
-<meta property="og:updated_time" content="2024-06-21T15:29:27+03:30">
+<meta property="og:updated_time" content="2026-06-04T12:00:00+03:30">
 <meta name="twitter:card" content="summary_large_image"> 
 <meta name="twitter:title" content="کارتن پستی , کارتن اسباب کشی - ویباکس">
 <meta name="twitter:description" content="فروش کارتن پستی و کارتن اسباب کشی در ابعاد مختلف  , کارتن سازی صالحی">
@@ -38,7 +38,7 @@
 						 <br>
 						<div class="hero-btn">
 							<a href="{% url 'amozesha' %}" class="bordered-btn">نحوه سفارش و پرداخت</a>
-							<a href="#footer-box" class="bordered-btn">تماس با ما</a>
+							<!--<a href="#footer-box" class="bordered-btn">تماس با ما</a>-->
 
 						</div>
 					</div>
@@ -48,7 +48,10 @@
 	</div>
 	<!-- end breadcrumb section -->
 	<div class="alert alert-light text-center" role="alert">
+
 		<h3>از گزینه های زیر برای فیلتر کردن استفاده کنید </h3>
+<p class="text-warning">⚠️ توجه: قیمت‌ها ممکن است بروز نباشند. برای استعلام قیمت دقیق و به‌روز، با ما تماس بگیرید.</p>
+<a href="#footer-box" class="boxed-btn">تماس با ما</a>
 	  </div>
 	<!-- products -->
 	<div class="product-section mt-150 mb-150">
@@ -120,14 +123,14 @@
 											<span class="date"><i class="ri-calendar-schedule-line"></i> اسفند 1403 </span>
 										</p> -->
 										<br><br>
-										<hr>
-										<h2>کارتن پستی</h2>
-										<p>پیشنهاد ما برای <strong>خرید کارتن</strong> پستی برای کسانی میباشد که محصول آن ها اندازه ثابتی نداشته و نمیتوانند برای هر محصول جعبه مخصوص به آن را سفارش دهند. </p>
-										<h2><a href="https://vboxs.ir/product/1/" target="_blank">سفارش کارتن</a></h2>
-										<p> &#11089; برای  <a href="https://vboxs.ir/product/1/" target="_blank"> سفارش کارتن </a>در ابعاد دلخواه میتوانید از لینک زیر به صفحه مورد نظر بروید &#11089;  </p>
-										<div class="hero-btn">
-											<a href="https://vboxs.ir/product/1/"  class="boxed-btn"> سفارش جعبه در ابعاد دلخواه </a>
-										</div>
+<hr>
+<h2>کارتن پستی</h2>
+<p>پیشنهاد ما برای <strong>خرید کارتن پستی</strong> برای کسانی است که محصول آن‌ها اندازه ثابتی ندارد و نمی‌توانند برای هر محصول جعبه مخصوص سفارش دهند.</p>
+<h2><a href="{% url 'product_show' 1 %}">سفارش کارتن</a></h2>
+<p>🔹 برای <a href="{% url 'product_show' 1 %}">سفارش کارتن در ابعاد دلخواه</a> می‌توانید از لینک زیر استفاده کنید 🔹</p>
+<div class="hero-btn">
+    <a href="{% url 'product_show' 1 %}" class="boxed-btn">سفارش جعبه در ابعاد دلخواه</a>
+</div>
 									</div>
 				
 								</div>
@@ -263,7 +266,7 @@
 										<br><br>
 										<hr>
 										<h3> چسب کارتن </h3>
-										<p> چسب های   <strong> کارتن</strong> موجود در ویباکس محصول خارجی ( نواری , کاغذی ) میباشد .</p>
+										<p> چسب های   <strong> کارتن</strong> موجود در ویباکس ساخت ترکيه ميباشند .</p>
 										
 										<p> چسب سیلیکات ( مایع ) بصورت لیتری فروخته میشود </p>
 										<div class="hero-btn">
